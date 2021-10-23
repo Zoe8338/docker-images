@@ -21,3 +21,4 @@ services:
     volumes:
       - /srv/dev-disk-by-uuid-0242c912-32c0-435e-9cd4-3d99a9a7f576/Minecraft:/data
     restart: always
+    # https://github.com/itzg/docker-minecraft-server#opadministrator-players
