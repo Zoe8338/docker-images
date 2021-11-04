@@ -10,6 +10,8 @@ services:
     environment:
       - SERVER_TYPE:rm5
       - NAME:TestServerOnLocal
+      - PUID:1000 
+      - PGID:1000
     volumes:
       - /home/steam/Unturned:/home/steam/Unturned
     restart: always
