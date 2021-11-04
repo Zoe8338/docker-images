@@ -1,0 +1,15 @@
+---
+version: "3"
+services:
+  unturned-server:
+    image: imperialplugins/unturned
+    container_name: unturned-server
+    ports:
+    - 27015:27015
+    - 27016:27016
+    environment:
+      - SERVER_TYPE:rm5
+      - NAME:TestServerOnLocal
+    volumes:
+      - /home/steam/Unturned:/home/steam/Unturned
+    restart: always
