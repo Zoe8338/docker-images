@@ -1,0 +1,12 @@
+opensubtitles:
+    image: fredrickbacker/opensubtitles
+    container_name: opensubtitles
+    user: "${UID}:${GID}"
+    volumes:
+      - /media/jellyfin/movies:/movies
+      - /media/jellyfin/tv:/series
+      - /media/opensubs/tmpsubs:/tmp
+      - /media/opensubs/config:/config
+    environment:
+      - USERNAME=JohnDoe
+      - PASSWORD=changeme
