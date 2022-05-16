@@ -12,6 +12,7 @@ services:
       - TZ=Europe/London
       - SUBFOLDER=/ #optional
       - KEYBOARD=pt-br-qwerty #optional
+      -e AUTO_LOGIN=false
     volumes:
       - /home/zoe/webtop-ubuntu-kde-001/data:/config
       - /var/run/docker.sock:/var/run/docker.sock #optional
