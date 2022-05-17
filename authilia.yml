@@ -1,0 +1,22 @@
+---
+version: '3.3'
+
+networks:
+  net:
+    driver: bridge
+
+services:
+  authelia:
+    image: authelia/authelia
+    container_name: authelia
+    volumes:
+      - /home/zoe/authelia/config:/config
+    networks:
+      - net
+    expose:
+      - 9035
+    restart: unless-stopped
+    healthcheck:
+      disable: true
+    environment:
+      - TZ=Europe/Lisbon
