@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  app:
+    image: gabekangas/owncast:latest
+    restart: always
+    ports:
+      - 8180:8080 
+      - 1935:1935
+    volumes:
+      - /home/zoe/owncast:/var/www/html
+    
